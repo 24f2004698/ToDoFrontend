@@ -122,7 +122,7 @@ function App() {
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4" />
                 </svg>
               </div>
-              <h1 className="text-xl sm:text-2xl font-bold text-gray-900">TaskFlow Pro</h1>
+              <h1 className="text-xl sm:text-2xl font-bold text-gray-900">ToDo App</h1>
             </div>
             <button
               onClick={logout}
@@ -307,7 +307,7 @@ function App() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 sm:py-6">
           <div className="text-center text-gray-600">
             <p className="flex flex-col sm:flex-row items-center justify-center text-sm sm:text-base">
-              <span className="mr-0 sm:mr-2">© 2025 TaskFlow Pro</span>
+              <span className="mr-0 sm:mr-2">© 2025 ToDo App</span>
               <span className="hidden sm:inline mx-2">•</span>
               <span className="ml-0 sm:ml-2">DevTown Project</span>
             </p>
