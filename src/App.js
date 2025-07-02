@@ -115,18 +115,18 @@ function App() {
       {/* Header */}
       <header className="bg-white shadow-lg border-b-4 border-orange-500">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex justify-between items-center py-6">
+          <div className="flex flex-col sm:flex-row justify-between items-center py-4 sm:py-6 gap-4 sm:gap-0">
             <div className="flex items-center space-x-4">
-              <div className="w-10 h-10 bg-gradient-to-r from-orange-500 to-orange-600 rounded-lg flex items-center justify-center">
-                <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <div className="w-8 h-8 sm:w-10 sm:h-10 bg-gradient-to-r from-orange-500 to-orange-600 rounded-lg flex items-center justify-center">
+                <svg className="w-5 h-5 sm:w-6 sm:h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4" />
                 </svg>
               </div>
-              <h1 className="text-2xl font-bold text-gray-900">TaskFlow Pro</h1>
+              <h1 className="text-xl sm:text-2xl font-bold text-gray-900">TaskFlow Pro</h1>
             </div>
             <button
               onClick={logout}
-              className="inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-lg text-white bg-gradient-to-r from-red-500 to-red-600 hover:from-red-600 hover:to-red-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-red-500 shadow-lg transition-all duration-200"
+              className="inline-flex items-center px-3 py-2 sm:px-4 sm:py-2 border border-transparent text-sm font-medium rounded-lg text-white bg-gradient-to-r from-red-500 to-red-600 hover:from-red-600 hover:to-red-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-red-500 shadow-lg transition-all duration-200"
             >
               <svg className="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17 16l4-4m0 0l-4-4m4 4H7m6 4v1a3 3 0 01-3 3H6a3 3 0 01-3-3V7a3 3 0 013-3h4a3 3 0 013 3v1" />
@@ -138,11 +138,11 @@ function App() {
       </header>
 
       {/* Main Content */}
-      <main className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+      <main className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-4 sm:py-8">
         {/* Add Task Section */}
-        <div className="bg-white rounded-2xl shadow-xl p-8 mb-8 border border-orange-200">
-          <h2 className="text-2xl font-semibold text-gray-900 mb-6 flex items-center">
-            <svg className="w-6 h-6 mr-3 text-orange-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <div className="bg-white rounded-2xl shadow-xl p-4 sm:p-8 mb-6 sm:mb-8 border border-orange-200">
+          <h2 className="text-xl sm:text-2xl font-semibold text-gray-900 mb-4 sm:mb-6 flex items-center">
+            <svg className="w-5 h-5 sm:w-6 sm:h-6 mr-2 sm:mr-3 text-orange-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 6v6m0 0v6m0-6h6m-6 0H6" />
             </svg>
             Add New Task
@@ -153,7 +153,7 @@ function App() {
               addTask(e.target[0].value);
               e.target[0].value = "";
             }}
-            className="flex gap-4"
+            className="flex flex-col sm:flex-row gap-3 sm:gap-4"
           >
             <div className="flex-1">
               <input
@@ -165,7 +165,7 @@ function App() {
             </div>
             <button
               type="submit"
-              className="px-8 py-3 bg-gradient-to-r from-orange-500 to-orange-600 hover:from-orange-600 hover:to-orange-700 text-white font-semibold rounded-xl shadow-lg hover:shadow-xl transition-all duration-200 transform hover:scale-105"
+              className="px-8 py-3 bg-gradient-to-r from-orange-500 to-orange-600 hover:from-orange-600 hover:to-orange-700 text-white font-semibold rounded-xl shadow-lg hover:shadow-xl transition-all duration-200 transform hover:scale-105 whitespace-nowrap"
             >
               Add Task
             </button>
@@ -173,15 +173,15 @@ function App() {
         </div>
 
         {/* Filters Section */}
-        <div className="bg-white rounded-2xl shadow-xl p-6 mb-8 border border-orange-200">
-          <h3 className="text-lg font-semibold text-gray-900 mb-4 flex items-center">
-            <svg className="w-5 h-5 mr-2 text-orange-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <div className="bg-white rounded-2xl shadow-xl p-4 sm:p-6 mb-6 sm:mb-8 border border-orange-200">
+          <h3 className="text-base sm:text-lg font-semibold text-gray-900 mb-3 sm:mb-4 flex items-center">
+            <svg className="w-4 h-4 sm:w-5 sm:h-5 mr-2 text-orange-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M3 4a1 1 0 011-1h16a1 1 0 011 1v2.586a1 1 0 01-.293.707l-6.414 6.414a1 1 0 00-.293.707V17l-4 4v-6.586a1 1 0 00-.293-.707L3.293 7.707A1 1 0 013 7V4z" />
             </svg>
             Filter Tasks
           </h3>
-          <div className="flex flex-wrap gap-4">
-            <div className="flex-1 min-w-48">
+          <div className="flex flex-col sm:flex-row gap-3 sm:gap-4">
+            <div className="flex-1">
               <label className="block text-sm font-medium text-gray-700 mb-2">Status</label>
               <select
                 onChange={(e) => setFilterStatus(e.target.value)}
@@ -193,7 +193,7 @@ function App() {
                 <option value="completed">Completed</option>
               </select>
             </div>
-            <div className="flex-1 min-w-48">
+            <div className="flex-1">
               <label className="block text-sm font-medium text-gray-700 mb-2">Priority</label>
               <select
                 onChange={(e) => setFilterPriority(e.target.value)}
@@ -211,9 +211,9 @@ function App() {
 
         {/* Tasks List */}
         <div className="bg-white rounded-2xl shadow-xl border border-orange-200 overflow-hidden">
-          <div className="px-6 py-4 bg-gradient-to-r from-orange-500 to-orange-600">
-            <h3 className="text-xl font-semibold text-white flex items-center">
-              <svg className="w-6 h-6 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <div className="px-4 sm:px-6 py-3 sm:py-4 bg-gradient-to-r from-orange-500 to-orange-600">
+            <h3 className="text-lg sm:text-xl font-semibold text-white flex items-center">
+              <svg className="w-5 h-5 sm:w-6 sm:h-6 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2" />
               </svg>
               Your Tasks ({filteredTasks.length})
@@ -221,24 +221,24 @@ function App() {
           </div>
           
           {filteredTasks.length === 0 ? (
-            <div className="p-12 text-center">
-              <svg className="w-16 h-16 mx-auto text-gray-400 mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <div className="p-8 sm:p-12 text-center">
+              <svg className="w-12 h-12 sm:w-16 sm:h-16 mx-auto text-gray-400 mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4" />
               </svg>
-              <h4 className="text-lg font-medium text-gray-900 mb-2">No tasks found</h4>
-              <p className="text-gray-500">Get started by adding your first task above.</p>
+              <h4 className="text-base sm:text-lg font-medium text-gray-900 mb-2">No tasks found</h4>
+              <p className="text-sm sm:text-base text-gray-500">Get started by adding your first task above.</p>
             </div>
           ) : (
             <div className="divide-y divide-gray-200">
               {filteredTasks.map((task) => (
                 <div
                   key={task._id}
-                  className="p-6 hover:bg-orange-50 transition-colors duration-200"
+                  className="p-4 sm:p-6 hover:bg-orange-50 transition-colors duration-200"
                 >
-                  <div className="flex items-start justify-between">
+                  <div className="flex flex-col lg:flex-row lg:items-start lg:justify-between gap-4">
                     <div className="flex-1 min-w-0">
-                      <div className="flex items-center mb-2">
-                        <span className={`inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium border ${getPriorityColor(task.priority)} mr-3`}>
+                      <div className="flex flex-wrap items-center gap-2 mb-2">
+                        <span className={`inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium border ${getPriorityColor(task.priority)}`}>
                           {task.priority.toUpperCase()}
                         </span>
                         <span className={`inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium ${
@@ -249,15 +249,15 @@ function App() {
                           {task.status === 'completed' ? 'COMPLETED' : 'PENDING'}
                         </span>
                       </div>
-                      <p className={`text-lg font-medium ${task.status === 'completed' ? 'text-gray-500 line-through' : 'text-gray-900'}`}>
+                      <p className={`text-base sm:text-lg font-medium break-words ${task.status === 'completed' ? 'text-gray-500 line-through' : 'text-gray-900'}`}>
                         {task.text}
                       </p>
                     </div>
                     
-                    <div className="flex items-center space-x-3 ml-4">
+                    <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-2 sm:gap-3">
                       <button
                         onClick={() => updateTaskStatus(task._id, task.status)}
-                        className={`inline-flex items-center px-3 py-2 border border-transparent text-sm font-medium rounded-lg focus:outline-none focus:ring-2 focus:ring-offset-2 transition-all duration-200 ${
+                        className={`inline-flex items-center justify-center px-3 py-2 border border-transparent text-sm font-medium rounded-lg focus:outline-none focus:ring-2 focus:ring-offset-2 transition-all duration-200 ${
                           task.status === "pending"
                             ? "text-green-700 bg-green-100 hover:bg-green-200 focus:ring-green-500"
                             : "text-orange-700 bg-orange-100 hover:bg-orange-200 focus:ring-orange-500"
@@ -285,7 +285,7 @@ function App() {
                       
                       <button
                         onClick={() => deleteTask(task._id)}
-                        className="inline-flex items-center px-3 py-2 border border-transparent text-sm font-medium rounded-lg text-red-700 bg-red-100 hover:bg-red-200 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-red-500 transition-all duration-200"
+                        className="inline-flex items-center justify-center px-3 py-2 border border-transparent text-sm font-medium rounded-lg text-red-700 bg-red-100 hover:bg-red-200 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-red-500 transition-all duration-200"
                         title="Delete Task"
                       >
                         <svg className="w-4 h-4 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -303,13 +303,13 @@ function App() {
       </main>
 
       {/* Footer */}
-      <footer className="bg-white border-t border-gray-200 mt-12">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
+      <footer className="bg-white border-t border-gray-200 mt-8 sm:mt-12">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 sm:py-6">
           <div className="text-center text-gray-600">
-            <p className="flex items-center justify-center">
-              <span className="mr-2">© 2025 TaskFlow Pro</span>
-              <span className="mx-2">•</span>
-              <span className="ml-2">DevTown Project</span>
+            <p className="flex flex-col sm:flex-row items-center justify-center text-sm sm:text-base">
+              <span className="mr-0 sm:mr-2">© 2025 TaskFlow Pro</span>
+              <span className="hidden sm:inline mx-2">•</span>
+              <span className="ml-0 sm:ml-2">DevTown Project</span>
             </p>
           </div>
         </div>
